@@ -1,0 +1,26 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 200px;
+}
+
+.left {
+    display: flex;
+}
+
+.left .logo {
+    text-align: right;
+}
+
+.left .menu {
+    background-color: aliceblue;
+    width: 500px;
+}
+
+.bantuan {
+    background-color: aqua;
+    width: 300px;
+}
