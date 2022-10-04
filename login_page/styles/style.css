@@ -57,6 +57,10 @@ input {
     border-bottom-color: #999898;
     border-bottom-style: solid;
     padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
 }
 
 input:focus {
