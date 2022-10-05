@@ -36,16 +36,14 @@
   font-size: 10px;
   font-weight: 100;
   visibility: hidden;
-  width: 100%;
-  background-color: white;
   color: #000;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
+  background-color: white;
   position: absolute;
-  z-index: 1;
   top: 75%;
-  left: 110%;
+  left: 105%;
+  width: 150%;
+  padding: 5px 2px;
+  z-index: 1;
 }
 .product_card .product .product_info .tooltip::after {
   content: "";
@@ -75,16 +73,14 @@
   font-size: 10px;
   font-weight: 100;
   visibility: hidden;
-  width: 100%;
-  background-color: white;
   color: #000;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
+  background-color: white;
   position: absolute;
-  z-index: 1;
   top: 75%;
-  left: 110%;
+  left: 105%;
+  width: 150%;
+  padding: 5px 2px;
+  z-index: 1;
 }
 .product_card .product .product_info .promo .tooltip::after {
   content: "";
@@ -169,22 +165,26 @@
   font-size: 14px;
   color: rgb(128, 128, 128);
 }
-.product_card .product .product_info .add_wishlist {
-  display: flex;
-  justify-content: end;
-  margin-right: 20px;
-  margin-bottom: 5px;
+.product_card .product .add_wishlist {
   position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5px;
 }
-.product_card .product .product_info .add_wishlist .add_wishlist_item {
+.product_card .product .add_wishlist .add_wishlist_item {
   position: relative;
   display: inline-block;
 }
-.product_card .product .product_info .add_wishlist .add_wishlist_item img {
+.product_card .product .add_wishlist .add_wishlist_item img {
   height: 16px;
   width: 16px;
+  padding: 5px;
 }
-.product_card .product .product_info .add_wishlist .add_wishlist_item .wishlist {
+.product_card .product .add_wishlist .add_wishlist_item img:hover {
+  background-color: rgb(238, 238, 238);
+  border-radius: 50%;
+}
+.product_card .product .add_wishlist .add_wishlist_item .wishlist {
   font-size: 14px;
   visibility: hidden;
   width: 180px;
@@ -198,7 +198,7 @@
   top: -12px;
   left: 300%;
 }
-.product_card .product .product_info .add_wishlist .add_wishlist_item .wishlist::after {
+.product_card .product .add_wishlist .add_wishlist_item .wishlist::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -208,7 +208,7 @@
   border-style: solid;
   border-color: transparent white transparent transparent;
 }
-.product_card .product .product_info .add_wishlist .add_wishlist_item:hover .wishlist {
+.product_card .product .add_wishlist .add_wishlist_item:hover .wishlist {
   visibility: visible;
 }
 .product_card .product:hover .loc_name {
