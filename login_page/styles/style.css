@@ -16,6 +16,7 @@ button {
     background-image: linear-gradient(to right,#64d5dd, #e33ff4);
     font-weight: 700;
     color: white;
+    max-width: 100%;
 }
 
 button:hover {
@@ -37,7 +38,8 @@ button:hover {
     align-items: center;
     padding: 50px;
     row-gap: 40px;
-    border-radius: 5px;
+    border-radius: 10px;
+    max-width: 70%;
 }
 
 .header .title {
@@ -185,4 +187,39 @@ label {
     margin-right: -400px;
     margin-top: 100px;
     z-index: -10;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    input, input:focus {
+        width: 216px;
+    }
+    button {
+        padding: 10px 100px;
+    }
+    .sosmed_icon {
+        font-size: 26px;
+    }
+    .signup {
+        margin-top: 50px;
+    }
+    .login_card{
+        row-gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    input, input:focus {
+        width: 216px;
+    }
+    button {
+        padding: 8px 80px;
+    }
+    .sosmed_icon {
+        font-size: 26px;
+    }
+    .login_card{
+        row-gap: 10px;
+    }
 }
