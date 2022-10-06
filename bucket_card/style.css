@@ -139,6 +139,7 @@ button i {
 }
 .bucket .bucket_card .main_bucket .other {
   display: flex;
+  cursor: pointer;
 }
 .bucket .bucket_card .main_bucket .other .chat, .bucket .bucket_card .main_bucket .other .wishlist, .bucket .bucket_card .main_bucket .other .share {
   width: 33.3%;
