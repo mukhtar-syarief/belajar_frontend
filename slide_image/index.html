@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/slide_image/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="image_content">
+                <div class="image" id="pertama">
+                    <a href="#">
+                        <img src="https://images.tokopedia.net/img/cache/1208/NsjrJu/2022/10/5/1763740b-d919-46cc-a869-3e92d7336607.jpg.webp?ect=3g" alt="Tokopedia Kebut">
+                    </a>
+                </div>
+                <div class="image" id="kedua">
+                    <a href="#">
+                        <img src="https://images.tokopedia.net/img/cache/1208/NsjrJu/2022/10/5/5f97c4ca-71fc-4dac-af1d-62b802ecfaf2.jpg.webp?ect=3g" alt="Tokopedia Kebut">
+                    </a>
+                </div>
+                <div class="image" id="ketiga">
+                    <a href="#">
+                        <img src="https://images.tokopedia.net/img/cache/1208/NsjrJu/2022/10/5/a614ba60-d7c8-4337-b479-d51ae708879b.jpg.webp?ect=3g" alt="Tokopedia Kebut">
+                    </a>
+                </div>
+            </div>
+            <button class="nav prev" onclick="plusDivs(+1)"><ion-icon name="chevron-back-outline" size="large"></ion-icon></button>
+            <button class="nav next" onclick="geserKanan()"><ion-icon name="chevron-forward-outline" size="large"></ion-icon></button>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="text/javascript">
+
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+        showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("image");
+            if (n > x.length) {slideIndex = 1};
+            if (n < 1) {slideIndex = x.length} ;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "block";
+            };
+            x[slideIndex-1].transform = "transformX(-100%)";
+        }
+        
+
+        function geserKanan(){
+            if (document.getElementById("pertama") != null && kanan){
+                document.getElementById("pertama").style.transform = `translateX(-100%)`;
+                document.getElementById("kedua").style.transform = `translateX(-100%)`;
+                document.getElementById("ketiga").style.transform = `translateX(-100%)`;
+                document.getElementById("pertama").id='kiri';
+            }
+            else if (kiri && ketiga){
+                console.log(kiri)
+                document.getElementById("kiri").style.transform = `translateX(-200%)`;
+                document.getElementById("kedua").style.transform = `translateX(-200%)`;
+                document.getElementById("ketiga").style.transform = `translateX(-200%)`;
+                document.getElementById("kedua").id = 'kiri2';
+            }
+            else if (kanan2){
+                console.log('jalan')
+                document.getElementById("pertama").style.transform = `translateX(-100%)`;
+                console.log('jalan')
+                document.getElementById("kanan2").style.transform = `translateX(-100%)`;
+                console.log('jalan')
+                document.getElementById("kanan").style.transform = `translateX(-100%)`;
+                document.getElementById("kanan2").id= 'kedua';
+            }
+            console.log("jalanplis")
+        }
+
+        function geserKiri() {
+            if (document.getElementById("ketiga") != null && kiri){
+                document.getElementById("kiri").style.transform = `translateX(-100%)`;
+                document.getElementById("kiri2").style.transform = `translateX(-100%)`;
+                document.getElementById("ketiga").style.transform = `translateX(-100%)`;
+                document.getElementById("ketiga").id='kanan';
+                document.getElementById("kiri2").id='kedua';
+            }
+            else if (kanan && kiri){
+                document.getElementById("kiri").style.transform = `translateX(0)`;
+                document.getElementById("kedua").style.transform = `translateX(0)`;
+                document.getElementById("kanan").style.transform = `translateX(0)`;
+                document.getElementById("kedua").id = 'kanan2';
+                document.getElementById("kiri").id='pertama';
+            }
+            else if (kiri2){
+                document.getElementById("kiri").style.transform = `translateX(-100%)`;
+                document.getElementById("kiri2").style.transform = `translateX(-100)`;
+                document.getElementById("ketiga").style.transform = `translateX(-100)`;
+                document.getElementById("kiri2").id= 'kedua';
+            }
+        }
+    </script>
+</body>
+</html>
