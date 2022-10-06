@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sauce One", sans-serif;
+  font-size: 12px;
+}
+
+button {
+  width: 16px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+button i {
+  color: green;
+}
+
+.bucket {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+.bucket .bucket_card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 250px;
+}
+.bucket .bucket_card .promotion {
+  padding: 15px 10px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, rgb(0, 94, 40) 0%, rgb(0, 148, 66) 100%);
+}
+.bucket .bucket_card .promotion h4 {
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+}
+.bucket .bucket_card .main_bucket {
+  font-family: "OpenSauceOneRegular", sans-serif;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(177, 177, 177);
+  border-radius: 5px;
+  padding: 10px;
+  row-gap: 10px;
+}
+.bucket .bucket_card .main_bucket h6 {
+  font-size: 14px;
+}
+.bucket .bucket_card .main_bucket .purchase_stock {
+  display: flex;
+  column-gap: 4px;
+  align-items: baseline;
+}
+.bucket .bucket_card .main_bucket .purchase_stock .purchase {
+  display: flex;
+  column-gap: 10px;
+  align-items: baseline;
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 3px;
+  padding: 3px 5px;
+}
+.bucket .bucket_card .main_bucket .purchase_stock .purchase .substract, .bucket .bucket_card .main_bucket .purchase_stock .purchase .add {
+  font-size: 14px;
+  cursor: default;
+}
+.bucket .bucket_card .main_bucket .purchase_stock .purchase p {
+  font-size: 12px;
+  padding: 0 5px;
+}
+.bucket .bucket_card .main_bucket .purchase_stock .stock {
+  font-size: 12px;
+}
+.bucket .bucket_card .main_bucket .purchase_stock .stock span {
+  font-weight: 600;
+}
+.bucket .bucket_card .main_bucket .information {
+  font-size: 10px;
+  color: rgb(161, 161, 161);
+}
+.bucket .bucket_card .main_bucket .seller_note {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  height: 20px;
+  cursor: pointer;
+}
+.bucket .bucket_card .main_bucket .seller_note ion-icon {
+  color: green;
+  width: 20px;
+  height: 20px;
+}
+.bucket .bucket_card .main_bucket .seller_note p {
+  font-weight: 900;
+  color: green;
+}
+.bucket .bucket_card .main_bucket .original_price {
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: line-through;
+}
+.bucket .bucket_card .main_bucket .subtotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 14px;
+}
+.bucket .bucket_card .main_bucket .subtotal h4 {
+  font-size: 16px;
+}
+.bucket .bucket_card .main_bucket .bucket_button {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.bucket .bucket_card .main_bucket .bucket_button .keranjang {
+  border: 1px solid green;
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px;
+  font-weight: 800;
+  color: white;
+  background-color: green;
+}
+.bucket .bucket_card .main_bucket .bucket_button .beli_langsung {
+  border: 1px solid green;
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px;
+  font-weight: 800;
+  color: green;
+}
+.bucket .bucket_card .main_bucket .other {
+  display: flex;
+}
+.bucket .bucket_card .main_bucket .other .chat, .bucket .bucket_card .main_bucket .other .wishlist, .bucket .bucket_card .main_bucket .other .share {
+  width: 33.3%;
+  display: flex;
+  align-items: baseline;
+  column-gap: 4px;
+  padding: 3px 10px;
+  font-weight: 700;
+  border-right: 1px solid rgb(175, 175, 175);
+}
+.bucket .bucket_card .main_bucket .other .share {
+  border: none;
+}

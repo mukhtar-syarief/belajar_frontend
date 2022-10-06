@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@mixin base_bucket_button{
+    border: 1px solid green;
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    font-weight: 800;
+}
+
+body {
+    font-family: 'Open Sauce One', sans-serif;
+    font-size: 12px;
+}
+
+button {
+    width: 16px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    i {
+        color: green;
+    }
+}
+
+.bucket {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+
+    .bucket_card {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        width: 250px;
+
+        .promotion {
+            padding: 15px 10px;
+            border-radius: 5px;
+            background: linear-gradient(90deg, rgb(0, 94, 40) 0%, rgb(0, 148, 66) 100%);
+        
+            h4 {
+                color: white;
+                font-weight: 600;
+                font-size: 12px;
+            }
+        }
+        .main_bucket {
+            font-family: 'OpenSauceOneRegular', sans-serif;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgb(177, 177, 177) ;
+            border-radius: 5px;
+            padding: 10px;
+            row-gap: 10px;
+            
+            h6 {
+                font-size: 14px;
+            }
+
+            .purchase_stock {
+                display: flex;
+                column-gap: 4px;
+                align-items: baseline;
+                
+                .purchase {
+                    display: flex;
+                    column-gap: 10px;
+                    align-items: baseline;
+                    border: 1px solid rgb(216, 216, 216);
+                    border-radius: 3px;
+                    padding: 3px 5px;
+
+                    .substract, .add {
+                        font-size: 14px;
+                        cursor: default;
+                    }
+
+                    p {
+                        font-size: 12px;
+                        padding: 0 5px;
+                    }
+                }
+                
+                .stock {
+                    font-size: 12px;
+
+                    span {
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            .information {
+                font-size: 10px;
+                color: rgb(161, 161, 161);
+            }
+
+            .seller_note {
+                display: flex;
+                column-gap: 10px;
+                align-items: center;
+                height: 20px;
+                cursor: pointer;
+
+                ion-icon {
+                    color: green;
+                    width: 20px;
+                    height: 20px;
+                }
+
+                p {
+                    font-weight: 900;
+                    color: green;
+                }
+            }
+
+            .original_price {
+                display: flex;
+                justify-content: flex-end;
+                text-decoration: line-through;
+            }
+
+            .subtotal {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                font-size: 14px;
+
+                h4 {
+                    font-size: 16px;
+                }
+            }
+
+            .bucket_button {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                row-gap: 10px;
+
+                .keranjang {
+                    @include base_bucket_button;
+                    color: white;
+                    background-color: green;
+                }
+
+                .beli_langsung {
+                    @include base_bucket_button;
+                    color: green;
+                }
+
+            }
+
+            .other {
+                display: flex;
+                
+                .chat, .wishlist, .share {
+                    width: 33.3%;
+                    display: flex;
+                    align-items: baseline;
+                    column-gap: 4px;
+                    padding: 3px 10px;
+                    font-weight: 700;
+                    border-right: 1px solid rgb(175, 175, 175);
+                }
+
+                .share {
+                    border: none;
+                }
+            }
+        }
+    }
+}
