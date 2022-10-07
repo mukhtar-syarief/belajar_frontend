@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+.jumbotron {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+.isian {
+  border: none;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0);
+  margin-bottom: 20px;
+}
+
+input {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 1px solid black;
+  padding: 5px 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+.isian {
+  font-size: 14px;
+}
+
+.title {
+  font-family: "Solena", sans-serif;
+  font-size: 4rem;
+}
+
+.signup {
+  background-color: #F9F9F9;
+  border-radius: 10px;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  color: white;
+  border: none;
+  background-color: #38E54D;
+}
+
+.sosmed {
+  row-gap: 0;
+}
+
+.sosmed_icon {
+  font-size: 30px;
+  column-gap: 18px;
+}
+.sosmed_icon .facebook {
+  color: #3b5998;
+}
+.sosmed_icon .instagram {
+  color: orangered;
+}
+.sosmed_icon .twiter {
+  color: #00aced;
+}
+
+.infinity {
+  font-size: 30px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/slide/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlideShow</title>
+</head>
+<body>
+    <div class="container">
+        <div class="slides">
+            <div class="slide_wrap">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <div class="image first">
+                    <img src="https://images.tokopedia.net/img/cache/1208/NsjrJu/2022/10/5/1763740b-d919-46cc-a869-3e92d7336607.jpg.webp?ect=3g" alt="">
+                </div>
+                <div class="image">
+                    <img src="https://images.tokopedia.net/img/cache/1208/NsjrJu/2022/10/5/5f97c4ca-71fc-4dac-af1d-62b802ecfaf2.jpg.webp?ect=3g" alt="">
+                </div>
+                <div class="image">
+                    <img src="https://images.tokopedia.net/img/cache/1208/NsjrJu/2022/10/5/a614ba60-d7c8-4337-b479-d51ae708879b.jpg.webp?ect=3g" alt="">
+                </div>
+                <div class="nav_auto">
+                    <div class="auto_btn1"></div>
+                    <div class="auto_btn2"></div>
+                    <div class="auto_btn3"></div>
+                </div>
+                <div class="nav_manual">
+                    <label for="radio1" class="manual_btn"></label>
+                    <label for="radio2" class="manual_btn"></label>
+                    <label for="radio3" class="manual_btn"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function() {
+            document.getElementById("radio"+counter).checked = true;
+            counter++;
+            if(counter > 3){
+                counter = 1;
+            }
+        }, 5000)
+    </script>
+</body>
+</html>

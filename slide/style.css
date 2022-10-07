@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(146, 248, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .slides {
+  width: 1208px;
+  height: 302px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.container .slides .slide_wrap {
+  width: 300%;
+  display: flex;
+  flex-direction: row;
+  column-gap: 0;
+}
+.container .slides .slide_wrap input {
+  display: none;
+}
+.container .slides .slide_wrap .image {
+  width: 1208px;
+  height: 302px;
+  transition: 3s;
+}
+.container .slides .slide_wrap .nav_auto {
+  position: absolute;
+  width: 1208px;
+  display: flex;
+  column-gap: 20px;
+  height: 302px;
+  align-items: flex-end;
+  justify-content: center;
+}
+.container .slides .slide_wrap .nav_auto div {
+  border: 2px solid rgba(167, 167, 167, 0.863);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+.container .slides .slide_wrap .nav_manual {
+  position: absolute;
+  width: 1208px;
+  display: flex;
+  column-gap: 20px;
+  height: 302px;
+  align-items: flex-end;
+  justify-content: center;
+}
+.container .slides .slide_wrap .nav_manual .manual_btn {
+  border: 2px solid rgba(167, 167, 167, 0.863);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+.container .slides .slide_wrap .nav_manual .manual_btn:hover {
+  background: rgba(167, 167, 167, 0.863);
+}
+.container .slides .slide_wrap #radio1:checked ~ .first {
+  margin-left: 0;
+}
+.container .slides .slide_wrap #radio2:checked ~ .first {
+  margin-left: -1208px;
+}
+.container .slides .slide_wrap #radio3:checked ~ .first {
+  margin-left: -2416px;
+}
+.container .slides .slide_wrap #radio1:checked ~ .nav_auto .auto_btn1 {
+  background: rgba(167, 167, 167, 0.863);
+}
+.container .slides .slide_wrap #radio2:checked ~ .nav_auto .auto_btn2 {
+  background: rgba(167, 167, 167, 0.863);
+}
+.container .slides .slide_wrap #radio3:checked ~ .nav_auto .auto_btn3 {
+  background: rgba(167, 167, 167, 0.863);
+}
