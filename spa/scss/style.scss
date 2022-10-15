@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// .container {
+//     background-color: rgb(236,45,1);
+// }
+
+.content {
+    row-gap: 20px;
+
+    .content_card {
+        height: 400px;
+
+        img {
+            width: 100%;
+            height: 250px;
+        }
+
+        div {
+            row-gap: 20px;
+        }
+
+    }
+}

@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  row-gap: 20px;
+}
+.content .content_card {
+  height: 400px;
+}
+.content .content_card img {
+  width: 100%;
+  height: 250px;
+}
+.content .content_card div {
+  row-gap: 20px;
+}

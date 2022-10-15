@@ -5,6 +5,7 @@
 .jumbotron {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
+  height: 540px;
 }
 
 .isian {
@@ -65,6 +66,9 @@ button {
   color: #00aced;
 }
 
-.infinity {
-  font-size: 30px;
+.features {
+  margin-bottom: 10px;
+}
+.features .card-feature img {
+  width: 100%;
 }
