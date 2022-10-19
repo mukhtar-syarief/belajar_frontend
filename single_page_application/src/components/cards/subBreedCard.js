@@ -1,5 +1,5 @@
-import { getAllBreed } from "../../apis/getAllBreed.js";
-import { getImageBreed } from "../../apis/getImageBreed.js";
+import getSubBreed from "../../apis/getSubBreed.js";
+import getSubBreedImage from "../../apis/getSubBreedImage.js";
 import { elementCreate } from "../elementCreate.js";
 import breedButton from "../buttons/breedButton.js"
 
@@ -8,7 +8,7 @@ import breedButton from "../buttons/breedButton.js"
  * 
  * @param {string} breedName 
  */
-async function breedCard(breedName, subBreed){
+async function subBreedCard(breedName, subBreedName){
     var card = elementCreate('div', {
         'class': 'card content_card',
         'style': 'width: 18rem;'
@@ -18,34 +18,38 @@ async function breedCard(breedName, subBreed){
         'class': 'card-body container d-flex flex-column justify-content-center'
     });
 
-    var imgBreed = await getImageBreed(breedName).then((results) => {
+    var imgSubBreed = await getSubBreedImage(breedName, subBreedName).then((results) => {
         return results['message']
     });
 
     var imgCard = elementCreate('img', {
-        'src': `${imgBreed}`,
-        'alt': `${breedName}`
+        'src': `${imgSubBreed}`,
+        'alt': `${subBreedName}`
     })
 
     var cardTitle = elementCreate('h5', {
         'class': 'card-title text-center'
-    }, `${breedName}`)
+    }, `${subBreedName}`)
 
-    var cardButton = breedButton(breedName, subBreed)
-
-    cardBody.append(cardTitle, cardButton);
+    cardBody.append(cardTitle);
     card.append(imgCard, cardBody);
 
     return card
 }
 
-async function cards() {
-    const data = getAllBreed().then((results) => {
+
+/**
+ * 
+ * @param {string} breedName 
+ * @returns {Array.<HTMLElement>}
+ */
+async function subBreedCards(breedName) {
+    const data = getSubBreed(breedName).then((results) => {
         return results['message']
     }).then(async (datas) => {
         var breedCards =[];
         for (let key in datas) {
-            var card = breedCard(key, datas[key]);
+            var card = subBreedCard(breedName, datas[key]);
             breedCards.push(card)
         }
         return Promise.all(breedCards)
@@ -56,4 +60,4 @@ async function cards() {
 
 
 
-export { cards }
+export { subBreedCards }

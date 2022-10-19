@@ -6,19 +6,15 @@ import { elementCreate } from "../elementCreate.js";
  */
 
 export default function  breedButton (breedName, subBreed) {
-    var btnLink = elementCreate('a')
-
-    var linkButton = elementCreate('button', {
-        'class': 'btn btn-secondary w-100',
-        'key': `${breedName}`
+    var btnLink = elementCreate('a', {
+        'href': `/breed/${breedName}`,
+        'class': 'sub_breed_link btn btn-secondary w-100'
     }, 'Lebih Banyak')
 
     if (subBreed.length == 0) {
-        console.log('tidak punya sub ras')
-        linkButton.classList.add('disabled')
+        btnLink.classList.add('disabled')
+        btnLink.classList.add('btn_off')
     }
-
-    btnLink.append(linkButton);
-
+    
     return btnLink
 }

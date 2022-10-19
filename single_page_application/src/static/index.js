@@ -1,5 +1,7 @@
 import breedView from "../views/breedView.js";
 import notFound from "../views/notFound.js";
+import { btnPagination } from "../components/pagination/pagination.js";
+import subBreedView from "../views/subBreedView.js";
 
 const pathToRegex = path => new RegExp("^" + path.replace(/\//g, "\\/").replace(/:\w+/g, "(.+)") + "$");
 
@@ -21,7 +23,7 @@ const router = async () => {
     const routes = [
         { path: '/404', view: notFound},
         { path: "/breed", view: breedView},
-        // { path: "/subbreed", view: () => console.log('View Sub Breed') },
+        { path: "/breed/:breedName", view: subBreedView},
     ];
 
     // Test each route for potential match
@@ -41,31 +43,35 @@ const router = async () => {
         };
         const view = new match.route.view(getParams(match));
         const notFound = await view.getHtml();
-        console.log(notFound)
     
         document.querySelector("#app").innerHTML = "";
         document.querySelector("#app").append(notFound);
         return console.log('Gagal')
     }
-
+    
+    console.log(getParams(match))
     const view = new match.route.view(getParams(match));
-
+    
     const cards = await view.getHtml();
 
     document.querySelector("#app").innerHTML = "";
     cards.forEach((card) => {
         document.querySelector('#app').append(card)
     });
+    btnPagination(cards);
 };
 
 window.addEventListener('popstate', router);
 
 document.addEventListener('DOMContentLoaded', () => {
-    // document.body.addEventListener('click', e => {
-    //     if (e.target.matches("[page]")) {
-    //         e.preventDefault();
-    //         navigateTo(e.target.href);
-    //     }
-    // });
+    document.body.addEventListener('click', e => {
+        e.preventDefault();
+        var className = Array.from(e.target.classList);
+        for (let item of className) {
+            if (item === 'sub_breed_link') {
+                navigateTo(e.target.href);
+            }
+        }
+    });
     router();
 });

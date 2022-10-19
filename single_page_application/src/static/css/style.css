@@ -11,8 +11,14 @@
   width: 100%;
   height: 250px;
 }
+#app .content_card div a {
+  cursor: no-drop;
+}
 #app .content_card div a button {
   width: 100%;
+}
+#app .content_card div a .btn_off {
+  cursor: no-drop;
 }
 #app .loader {
   display: flex;
@@ -68,6 +74,10 @@
 }
 #app .loader .loading .dot:nth-child(5)::before {
   animation-delay: 1s;
+}
+
+.pagination_item li {
+  cursor: pointer;
 }
 
 @keyframes wave {

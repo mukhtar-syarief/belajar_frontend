@@ -15,9 +15,14 @@
         div {
 
             a {
-
+                cursor:no-drop;
+               
                 button {
                     width: 100%;
+                }
+
+                .btn_off {
+                    cursor:no-drop;
                 }
             }
         }
@@ -61,6 +66,12 @@
                 }
             }
         }
+    }
+}
+
+.pagination_item {
+    li {
+        cursor: pointer;
     }
 }
 

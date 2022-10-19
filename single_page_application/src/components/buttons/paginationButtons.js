@@ -8,11 +8,10 @@ import { elementCreate } from "../elementCreate.js";
 export default function paginationBtn (pageNumber){
     var liBtn = elementCreate('li', {
         'class': 'page-item page',
-        'href': '#'
     })
 
     var btnLink = elementCreate('a', {
-        'class': 'page-link'
+        'class': 'page-link',
     }, `${pageNumber}`)
 
     liBtn.append(btnLink);
